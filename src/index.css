@@ -1,13 +1,232 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+}
+.App {
+  display: flex;
+  width: 100%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.tabs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 20px 10px;
+  padding: 0 10px;
+  height: 40px;
+  width: 180px;
+  background: rgba(229, 227, 227, 0.655);
+}
+
+.tabs-contact {
+  background-color: white;
+  padding: 3px 10px;
+  height: 20px;
+}
+
+.table {
+  margin: 20px 10px;
+  background: #fff;
+  padding: 10px;
+  height: 90vh;
+}
+.main-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table-headings {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.excel {
+  background-color: white;
+  padding: 6px 3px;
+  border-radius: 3px;
+  border: 1px solid rgb(214, 213, 213);
+}
+
+.view {
+  background-color: white;
+  height: 22px;
+  border-radius: 3px;
+  border: 1px solid rgb(214, 213, 213);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 6px 4px;
+}
+
+.search-input {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  height: 22px;
+  border-radius: 3px;
+  padding: 6px 3px;
+  border: 1px solid rgb(214, 213, 213);
+}
+
+.search-input input {
+  outline: none;
+  border: none;
+}
+
+th {
+  background: rgb(194, 228, 248);
+  font-size: 15px;
+}
+
+th div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 10px;
+}
+.tabs div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.tabs-create {
+  padding: 3px 10px;
+  height: 20px;
+  color: grey;
+}
+
+.main-content {
+  background-color: #f5fffa;
+  width: 100%;
+  height: 100%;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 50vh;
+  width: 200px;
+  font-weight: 400px;
+  font-size: 17px;
+  padding: 0 10px 0 10px;
+}
+
+.dashboard,
+.feedback,
+.comman {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.account,
+.contact,
+.leads,
+.deals {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.pagination-button {
+  padding: 6px 12px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pagination-button:hover {
+  background-color: #d9d9d9;
+}
+
+.pagination-button.active {
+  background-color: #1890ff;
+  color: white;
+  border-color: #1890ff;
+  font-weight: bold;
+}
+
+.pagination-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 800px;
+  /* margin: auto; */
+  margin: 0px auto 20px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.error {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 5px;
+}
+
+.submit-button {
+  padding: 12px 20px;
+  background-color: #1890ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 200px;
+  margin: auto;
+}
+
+.submit-button:hover {
+  background-color: #40a9ff;
 }
