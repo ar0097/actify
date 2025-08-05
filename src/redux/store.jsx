@@ -1,7 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import detailReducer from "./slice";
 
-// Load State from LocalStorage
 const loadState = () => {
   try {
     const serializedState = localStorage.getItem("contactsState");
@@ -15,7 +14,6 @@ const loadState = () => {
   }
 };
 
-// Save State to LocalStorage
 const saveState = (state) => {
   try {
     const serializedState = JSON.stringify(state);

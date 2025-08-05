@@ -1,7 +1,7 @@
 import { nanoid } from "@reduxjs/toolkit";
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
-import { addContact } from "../redux/slice";  // <-- Adjust path
+import { addContact } from "../redux/slice";  
 
 function Addnewdata() {
   const dispatch = useDispatch();
