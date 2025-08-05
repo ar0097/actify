@@ -89,7 +89,7 @@ function Table() {
           <h3>Contact List</h3>
           <p>Here is a List of Contact</p>
         </div>
-        <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+        <div className="mobile-search" style={{ display: "flex", alignItems: "center", gap: 10 }}>
           <div
             className="excel"
             style={{ cursor: "pointer" }}
@@ -116,78 +116,80 @@ function Table() {
         </div>
       </div>
 
-      <table className="main-table">
-        <thead>
-          <tr>
-            <th>
-              <div>Edit</div>
-            </th>
-            <th onClick={() => handleSort("contactOwner")}>
-              <div>
-                <p>Contact Owner {renderSortArrow("contactOwner")}</p>
-              </div>
-            </th>
-            <th onClick={() => handleSort("accountName")}>
-              <div>
-                <p>Account Name {renderSortArrow("accountName")}</p>
-              </div>
-            </th>
-            <th onClick={() => handleSort("name")}>
-              <div>
-                <p>Name {renderSortArrow("name")}</p>
-              </div>
-            </th>
-            <th onClick={() => handleSort("email")}>
-              <div>
-                <p>Email {renderSortArrow("email")}</p>
-              </div>
-            </th>
-            <th onClick={() => handleSort("phone")}>
-              <div>
-                <p>Phone {renderSortArrow("phone")}</p>
-              </div>
-            </th>
-            <th onClick={() => handleSort("createdDate")}>
-              <div>
-                <p>Created Date {renderSortArrow("createdDate")}</p>
-              </div>
-            </th>
-            <th onClick={() => handleSort("contactLog")}>
-              <div>
-                <p>Contact Log {renderSortArrow("contactLog")}</p>
-              </div>
-            </th>
-            <th onClick={() => handleSort("contactSource")}>
-              <div>
-                <p>Contact Source {renderSortArrow("contactSource")}</p>
-              </div>
-            </th>
-            <th onClick={() => handleSort("contactStatus")}>
-              <div>
-                <p>Contact Status {renderSortArrow("contactStatus")}</p>
-              </div>
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          {paginatedContacts.map((contact) => (
-            <tr key={contact.id} style={{ height: 40 }}>
-              <td>
-                <FaEdit style={{ cursor: "pointer", paddingLeft: 10 }} />
-              </td>
-              <td>{contact.contactOwner}</td>
-              <td>{contact.accountName}</td>
-              <td>{contact.name}</td>
-              <td>{contact.email}</td>
-              <td>{contact.phone}</td>
-              <td>{contact.createdDate}</td>
-              <td>{contact.contactLog}</td>
-              <td>{contact.contactSource}</td>
-              <td>{contact.contactStatus}</td>
+      <div className="mobile">
+        <table className="main-table">
+          <thead>
+            <tr>
+              <th>
+                <div>Edit</div>
+              </th>
+              <th onClick={() => handleSort("contactOwner")}>
+                <div>
+                  <p>Contact Owner {renderSortArrow("contactOwner")}</p>
+                </div>
+              </th>
+              <th onClick={() => handleSort("accountName")}>
+                <div>
+                  <p>Account Name {renderSortArrow("accountName")}</p>
+                </div>
+              </th>
+              <th onClick={() => handleSort("name")}>
+                <div>
+                  <p>Name {renderSortArrow("name")}</p>
+                </div>
+              </th>
+              <th onClick={() => handleSort("email")}>
+                <div>
+                  <p>Email {renderSortArrow("email")}</p>
+                </div>
+              </th>
+              <th onClick={() => handleSort("phone")}>
+                <div>
+                  <p>Phone {renderSortArrow("phone")}</p>
+                </div>
+              </th>
+              <th onClick={() => handleSort("createdDate")}>
+                <div>
+                  <p>Created Date {renderSortArrow("createdDate")}</p>
+                </div>
+              </th>
+              <th onClick={() => handleSort("contactLog")}>
+                <div>
+                  <p>Contact Log {renderSortArrow("contactLog")}</p>
+                </div>
+              </th>
+              <th onClick={() => handleSort("contactSource")}>
+                <div>
+                  <p>Contact Source {renderSortArrow("contactSource")}</p>
+                </div>
+              </th>
+              <th onClick={() => handleSort("contactStatus")}>
+                <div>
+                  <p>Contact Status {renderSortArrow("contactStatus")}</p>
+                </div>
+              </th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {paginatedContacts.map((contact) => (
+              <tr key={contact.id} style={{ height: 40 }}>
+                <td>
+                  <FaEdit style={{ cursor: "pointer", paddingLeft: 10 }} />
+                </td>
+                <td>{contact.contactOwner}</td>
+                <td>{contact.accountName}</td>
+                <td>{contact.name}</td>
+                <td>{contact.email}</td>
+                <td>{contact.phone}</td>
+                <td>{contact.createdDate}</td>
+                <td>{contact.contactLog}</td>
+                <td>{contact.contactSource}</td>
+                <td>{contact.contactStatus}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
 
       <div className="pagination-container">
         <button

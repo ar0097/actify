@@ -229,3 +229,39 @@ th div {
 .submit-button:hover {
   background-color: #40a9ff;
 }
+
+@media screen and (max-width: 768px) {
+  .table-headings {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .mobile-search {
+    display: flex;
+    align-items: center;
+  }
+  .sidebar {
+    display: none;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+
+  .table {
+    height: 100vh;
+  }
+  .mobile {
+    overflow: scroll;
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  .pagination-container {
+    margin-top: 40px;
+  }
+
+  .contact-form {
+    margin: 10px;
+  }
+}
